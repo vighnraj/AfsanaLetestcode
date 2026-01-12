@@ -444,11 +444,9 @@ import io from 'socket.io-client';
 import axios from 'axios';
 import './Chat.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BASE_URL from '../../Config';
+import BASE_URL, { SOCKET_URL } from '../../Config';
 
-// const Socket_URL = "https://afsana-backend-production.up.railway.app/";
-const Socket_URL = "https://afsana-backend-production-0897.up.railway.app/";
-const socket = io(Socket_URL, { transports: ['websocket'] });
+const socket = io(SOCKET_URL, { transports: ['websocket'] });
 
 const ChatAppLayout = () => {
     const [users, setUsers] = useState([]);

@@ -1,0 +1,142 @@
+# Commercial License
+
+## EduCRM React Admin Dashboard - Frontend Template
+
+**Copyright (c) 2025. All Rights Reserved.**
+
+---
+
+## License Grant
+
+This Commercial License ("License") is a legal agreement between you ("Licensee")
+and the author of EduCRM React Admin Dashboard ("Licensor").
+
+By purchasing and/or using this software, you agree to the terms of this License.
+
+---
+
+## License Type: Single Commercial License
+
+### You ARE Permitted To:
+
+1. **Use for One Project**
+   - Use this template to create ONE end product for yourself or for one client.
+
+2. **Modify the Code**
+   - Modify, adapt, or customize the source code for your project.
+   - Combine with other works to create a derivative product.
+
+3. **Commercial Use**
+   - Use in commercial projects and products.
+   - Charge your clients for products built with this template.
+
+4. **Remove Attribution**
+   - Attribution is not required in your end product.
+
+### You Are NOT Permitted To:
+
+1. **Redistribution**
+   - Redistribute, resell, lease, license, or sublicense this template.
+   - Share the source code with third parties.
+   - Include in any code repository (public or private) that others can access.
+
+2. **Multiple Projects**
+   - Use this template for multiple projects without purchasing additional licenses.
+   - Each project requires a separate license.
+
+3. **Template/Theme Sales**
+   - Create derivative templates, themes, or UI kits for resale.
+   - Include in any collection, bundle, or package for distribution.
+
+4. **SaaS/Multi-Tenant**
+   - Use as a basis for a SaaS product where the template itself is the product.
+   - Allow end users to customize or access the source code.
+
+5. **Open Source**
+   - Release any part of this template under an open-source license.
+
+---
+
+## What Is Included
+
+This license covers the **FRONTEND SOURCE CODE ONLY**, including:
+- React components and pages
+- CSS/styling files
+- JavaScript/JSX files
+- Configuration files
+- Documentation
+
+## What Is NOT Included
+
+This license does **NOT** include:
+- Backend API or server code
+- Database schemas or data
+- Third-party services (Firebase, etc.)
+- Hosting or deployment services
+- Custom development or support
+
+---
+
+## Third-Party Components
+
+This template includes third-party open-source libraries (React, Bootstrap, etc.)
+which are subject to their own licenses. See `package.json` for a full list.
+
+---
+
+## Warranty Disclaimer
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR UNINTERRUPTED.
+
+---
+
+## Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THIS SOFTWARE.
+
+---
+
+## Support
+
+Support is limited to:
+- Answering questions about template functionality
+- Clarifying documentation
+- Reporting and addressing defects
+
+Support does NOT include:
+- Custom development
+- Backend development
+- Installation or hosting services
+- Third-party integration assistance
+
+---
+
+## Termination
+
+This License is effective until terminated. Your rights under this License will
+terminate automatically if you fail to comply with any of its terms.
+
+---
+
+## Governing Law
+
+This License shall be governed by and construed in accordance with applicable laws.
+
+---
+
+## Contact
+
+For licensing questions or to purchase additional licenses, please contact
+through the marketplace where this product was purchased.
+
+---
+
+**By using this software, you acknowledge that you have read this License,
+understand it, and agree to be bound by its terms and conditions.**
+
+---
+
+EduCRM React Admin Dashboard
+Copyright (c) 2025. All Rights Reserved.

@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import "./ChatBox.css";
 import { useParams } from "react-router-dom";
 import ChatList from "./ChatList";
+import { SOCKET_URL } from "../../Config";
 
 const ChatBox = ({ userId }) => {
   const { receiverId } = useParams();
@@ -32,7 +33,7 @@ const ChatBox = ({ userId }) => {
     if (userId && receiverId) {
       if (socketRef.current) socketRef.current.disconnect();
 
-      const socket = io("https://afsana-backend-production-0897.up.railway.app", {
+      const socket = io(SOCKET_URL, {
         forceNew: true,
       });
 

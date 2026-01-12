@@ -297,9 +297,9 @@ import {
 } from "lucide-react";
 import { io } from "socket.io-client";
 import "../layout/Navbar.css";
-import BASE_URL from "../Config";
+import BASE_URL, { SOCKET_URL } from "../Config";
 
-const socket = io(`https://afsana-backend-production-0897.up.railway.app`, {
+const socket = io(SOCKET_URL, {
   reconnection: true,
   reconnectionAttempts: Infinity,
   reconnectionDelay: 1000,
