@@ -1,0 +1,102 @@
+================================================================================
+                         ENVATO REGULAR LICENSE
+================================================================================
+
+This license is a legal agreement between you and the author of this item.
+
+By purchasing this item, you agree to the terms set forth in the Envato
+Market Terms: https://themeforest.net/licenses/terms/regular
+
+================================================================================
+                         LICENSE SUMMARY
+================================================================================
+
+The Regular License grants you, the purchaser, an ongoing, non-exclusive,
+worldwide license to make use of the digital work (Item).
+
+YOU ARE ALLOWED TO:
+
+1. Use the Item to create a single End Product for yourself or for one client.
+
+2. Modify or manipulate the Item, or combine the Item with other works, to
+   create a derivative work. The resulting works are subject to the terms
+   of this license.
+
+3. Use the Item in a work which is created for sale, but the Item itself
+   cannot be sold separately.
+
+YOU ARE NOT ALLOWED TO:
+
+1. Re-distribute the Item as-is or with superficial modifications.
+
+2. Use the Item in more than one project without purchasing additional licenses.
+
+3. Use the Item in any application allowing an end user to customize a
+   digital or physical product to their specific needs.
+
+4. Use the Item to create merchandise for sale.
+
+5. Permit an end user of the End Product to extract the Item and use it
+   separately from the End Product.
+
+================================================================================
+                         IMPORTANT NOTES
+================================================================================
+
+1. This is a FRONTEND-ONLY template. Backend functionality is not included.
+
+2. You may NOT claim this template as your own original work.
+
+3. You may NOT resell, redistribute, or include this template in any
+   collection or bundle without explicit written permission.
+
+4. You may NOT use this template to create a competing product on any
+   marketplace.
+
+5. Support is provided for the original, unmodified template only.
+
+================================================================================
+                         ATTRIBUTION
+================================================================================
+
+Attribution is not required, but appreciated.
+
+================================================================================
+                         SUPPORT
+================================================================================
+
+Support includes:
+- Answering questions about how to use the item
+- Answering technical questions about the item
+- Help with defects in the item
+- Item updates to ensure ongoing compatibility
+
+Support does NOT include:
+- Installation or hosting services
+- Customization or modification services
+- Third-party plugin/extension support
+- Backend development
+
+================================================================================
+                         REFUND POLICY
+================================================================================
+
+Due to the digital nature of this product, refunds are handled according to
+Envato Market's refund policy: https://themeforest.net/page/refund_policy
+
+================================================================================
+                         CONTACT
+================================================================================
+
+For license inquiries or questions, please contact through:
+- CodeCanyon item comments
+- Envato support system
+
+================================================================================
+
+Copyright (c) 2025 - All Rights Reserved
+
+This document is part of the EduCRM React Admin Dashboard package.
+Unauthorized reproduction or distribution is prohibited.
+
+================================================================================

@@ -1,0 +1,33 @@
+================================================================================
+                    EduCRM React Admin Dashboard
+                         LIVE DEMO
+================================================================================
+
+Live Demo URL:
+https://your-demo-url.netlify.app
+
+================================================================================
+
+Demo Credentials:
+
+Admin Login:
+- Email: admin@demo.com
+- Password: demo123
+
+Counselor Login:
+- Email: counselor@demo.com
+- Password: demo123
+
+Student Login:
+- Email: student@demo.com
+- Password: demo123
+
+Staff Login:
+- Email: staff@demo.com
+- Password: demo123
+
+================================================================================
+
+Note: This is a demo environment. Data may be reset periodically.
+
+================================================================================
