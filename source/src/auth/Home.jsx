@@ -226,15 +226,9 @@ const App = () => {
       <Navbar expand="lg" className="navbarHome py-3 fixed-top backdrop-blur">
         <Container>
           <Navbar.Brand href="#" className="d-flex align-items-center">
-            <img
-              src="/img/logo.png"
-              alt="Kiaan Study Info"
-              height="40"
-              className="me-2"
-            />
             <div className="brand-text">
-              <span className="text-gradient">Kiaan</span>
-              <span className="fw-bold" style={{ color: "white" }}>
+              <span className="text-gradient" style={{ fontSize: "24px", fontWeight: "bold" }}>Kiaan</span>
+              <span className="fw-bold" style={{ color: "white", fontSize: "24px" }}>
                 {" "}Study Info
               </span>
             </div>
