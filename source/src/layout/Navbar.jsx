@@ -443,8 +443,7 @@ let processor_id = loginDetail?.id && loginDetail.id !== 135 ? loginDetail.id : 
           className="d-flex align-items-center gap-3"
           style={{ marginTop: "-20px" }}
         >
-          <span style={{ fontSize: "20px", fontWeight: "bold", color: "#1d4ed8" }}>Kiaan</span>
-          <span style={{ fontSize: "20px", fontWeight: "bold" }}>Study Info</span>
+          <img src="/kt.webp" alt="Logo" height={60} />
           <button
             className="btn btn-light border"
             onClick={(e) => {

@@ -226,12 +226,12 @@ const App = () => {
       <Navbar expand="lg" className="navbarHome py-3 fixed-top backdrop-blur">
         <Container>
           <Navbar.Brand href="#" className="d-flex align-items-center">
-            <div className="brand-text">
-              <span className="text-gradient" style={{ fontSize: "24px", fontWeight: "bold" }}>Kiaan</span>
-              <span className="fw-bold" style={{ color: "white", fontSize: "24px" }}>
-                {" "}Study Info
-              </span>
-            </div>
+            <img
+              src="/kt.webp"
+              alt="Kiaan Study Info"
+              height="50"
+              className="me-2"
+            />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

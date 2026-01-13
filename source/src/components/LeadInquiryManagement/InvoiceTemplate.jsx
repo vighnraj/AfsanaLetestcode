@@ -44,12 +44,7 @@ const InvoiceTemplate = forwardRef(({ invoice }, invoiceRef) => {
 
             <div ref={invoiceRef} className="invoice-card shadow p-4">
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                    <div>
-                        <h3 style={{ margin: 0 }}>
-                            <span style={{ color: "#1d4ed8", fontWeight: "bold" }}>Kiaan</span>
-                            <span style={{ fontWeight: "bold" }}> Study Info</span>
-                        </h3>
-                    </div>
+                    <img src="/kt.webp" alt="Logo" style={{ height: "60px" }} />
                     <div className="text-end">
                         <h2 className="fw-bold">Invoice</h2>
                         <p><strong>Invoice #:</strong> {invoice.id}</p>
