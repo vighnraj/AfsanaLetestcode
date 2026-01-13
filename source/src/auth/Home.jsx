@@ -527,6 +527,17 @@ const App = () => {
             <Col md={6} className="text-md-end">
               <p>&copy; 2025 Kiaan Study Info. All Rights Reserved.</p>
               <p>Privacy Policy | Terms of Use</p>
+              <p style={{ marginTop: "10px" }}>
+                Developed by{" "}
+                <a
+                  href="https://kiaantechnology.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#60a5fa", textDecoration: "none" }}
+                >
+                  Kiaan Technology
+                </a>
+              </p>
             </Col>
           </Row>
         </Container>
