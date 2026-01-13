@@ -14,7 +14,7 @@ import api from "../services/axiosInterceptor";
 import { auth, provider, signInWithPopup } from "../services/firebase"; // adjust path as needed
 import RegisterDeviceToken from "./RegisterDeviceToken";
 // Demo Authentication - For CodeCanyon reviewers
-import { getDemoUser, generateDemoToken, getDashboardPath, DEMO_USERS } from "./demoAuth";
+import { getDashboardPath } from "./demoAuth";
 
 const Login = ({ setLogin }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -23,30 +23,42 @@ const Login = ({ setLogin }) => {
   const navigate = useNavigate();
 
   // ========== DEMO LOGIN HANDLER - For CodeCanyon Review ==========
-  const handleDemoLogin = (email, password) => {
+  // This calls the actual backend API for proper authentication
+  const handleDemoLogin = async (email, password) => {
     setFormData({ email, password });
-    // Auto-submit after setting credentials
-    setTimeout(() => {
-      const demoUser = getDemoUser(email, password);
-      if (demoUser) {
-        const { user, permissions } = demoUser;
-        const demoToken = generateDemoToken(user.role);
 
-        setLogin(user.role);
-        localStorage.setItem("login", user.role);
+    try {
+      const response = await axios.post(`${BASE_URL}auth/login`, { email, password });
+      const { token, user } = response.data;
+      const role = user.role;
+
+      if (role && token) {
+        setLogin(role);
+        localStorage.setItem("login", role);
         localStorage.setItem("role", user.role);
-        localStorage.setItem("authToken", demoToken);
+        localStorage.setItem("authToken", token);
         localStorage.setItem("user_id", user.id);
         localStorage.setItem("login_detail", JSON.stringify(user));
         localStorage.setItem("counselor_id", user.counselor_id);
         localStorage.setItem("student_id", user.student_id);
-        localStorage.setItem("permissions", JSON.stringify(permissions));
-        localStorage.setItem("userpermissions", JSON.stringify(permissions));
+
+        // Fetch permissions
+        try {
+          const permissionsResponse = await api.get(`permission?role_name=${role}`);
+          const userpermissionsResponse = await api.get(`permissions?user_id=${user.id}`);
+          localStorage.setItem("permissions", JSON.stringify(permissionsResponse.data));
+          localStorage.setItem("userpermissions", JSON.stringify(userpermissionsResponse.data));
+        } catch (permError) {
+          console.log("Permissions fetch error:", permError);
+          localStorage.setItem("permissions", JSON.stringify([]));
+          localStorage.setItem("userpermissions", JSON.stringify([]));
+        }
+
         localStorage.setItem("authEvent", Date.now());
         setIsLoggedIn(true);
 
         Swal.fire({
-          title: 'Demo Login Success!',
+          title: 'Login Success!',
           text: `Welcome ${user.full_name}! You are logged in as ${user.role}.`,
           icon: 'success',
           confirmButtonText: 'Continue',
@@ -54,7 +66,10 @@ const Login = ({ setLogin }) => {
           navigate(getDashboardPath(user.role));
         });
       }
-    }, 100);
+    } catch (error) {
+      console.error("Demo login error:", error);
+      toast.error("Login failed. Please try again.");
+    }
   };
 
   useEffect(() => {
@@ -93,39 +108,6 @@ const Login = ({ setLogin }) => {
       toast.error("Please enter email and password.");
       return;
     }
-
-    // ========== DEMO LOGIN - START (CodeCanyon Review) ==========
-    // Check if credentials match demo users (no database dependency)
-    const demoUser = getDemoUser(formData.email, formData.password);
-    if (demoUser) {
-      const { user, permissions } = demoUser;
-      const demoToken = generateDemoToken(user.role);
-
-      // Set localStorage with demo user data
-      setLogin(user.role);
-      localStorage.setItem("login", user.role);
-      localStorage.setItem("role", user.role);
-      localStorage.setItem("authToken", demoToken);
-      localStorage.setItem("user_id", user.id);
-      localStorage.setItem("login_detail", JSON.stringify(user));
-      localStorage.setItem("counselor_id", user.counselor_id);
-      localStorage.setItem("student_id", user.student_id);
-      localStorage.setItem("permissions", JSON.stringify(permissions));
-      localStorage.setItem("userpermissions", JSON.stringify(permissions));
-      localStorage.setItem("authEvent", Date.now());
-      setIsLoggedIn(true);
-
-      Swal.fire({
-        title: 'Demo Login Success!',
-        text: `Welcome ${user.full_name}! You are logged in as ${user.role}.`,
-        icon: 'success',
-        confirmButtonText: 'Continue',
-      }).then(() => {
-        navigate(getDashboardPath(user.role));
-      });
-      return;
-    }
-    // ========== DEMO LOGIN - END ==========
 
     try {
       const response = await axios.post(`${BASE_URL}auth/login`, formData);
