@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BASE_URL from '../Config';
+// Demo Authentication - For CodeCanyon reviewers
+import { isDemoToken } from '../auth/demoAuth';
 
 
 const ProtectedRoute = ({ children }) => {
@@ -16,6 +18,15 @@ const ProtectedRoute = ({ children }) => {
         handleLogout();
         return;
       }
+
+      // ========== DEMO TOKEN BYPASS - START (CodeCanyon Review) ==========
+      // Skip API validation for demo tokens (no backend required)
+      if (isDemoToken(token)) {
+        setLoading(false);
+        return;
+      }
+      // ========== DEMO TOKEN BYPASS - END ==========
+
       try {
         const res = await fetch(`${BASE_URL}auth/validate-token`, {
           method: 'POST',

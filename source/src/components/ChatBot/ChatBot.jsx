@@ -82,7 +82,7 @@
 
 
 import React, { useState, useRef, useEffect } from 'react';
-import './ChatbotMain.css';
+import './chatBotMain.css';
 import BASE_URL from '../../Config';
 
 const Chatbot = () => {

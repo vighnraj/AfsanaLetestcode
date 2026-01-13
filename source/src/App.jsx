@@ -36,7 +36,7 @@ import AddCounselor from "./components/TaskCalendarManagement/AddCounselor";
 import TaskAssignment from "./components/TaskCalendarManagement/TaskAssignment";
 import TaskReminder from "./components/TaskCalendarManagement/TaskReminder";
 import RolesManagement from "./components/CourseUniversityDatabase/RolesManagement";
-import PermissionsTable from "./components/CourseUniversityDatabase/permissionsData";
+import PermissionsTable from "./components/CourseUniversityDatabase/PermissionsData";
 import CourseUniversityDatabase from "./components/CourseUniversityDatabase/CourseUniversityDatabase";
 import StudentProfile from "./components/Profile/Dashboard";
 import StudentUniversity from "./components/PaymentInvoiceManagement/StudentUniversity";

@@ -13,6 +13,8 @@ import axios from "axios";
 import api from "../services/axiosInterceptor";
 import { auth, provider, signInWithPopup } from "../services/firebase"; // adjust path as needed
 import RegisterDeviceToken from "./RegisterDeviceToken";
+// Demo Authentication - For CodeCanyon reviewers
+import { getDemoUser, generateDemoToken, getDashboardPath } from "./demoAuth";
 
 const Login = ({ setLogin }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -56,6 +58,39 @@ const Login = ({ setLogin }) => {
       toast.error("Please enter email and password.");
       return;
     }
+
+    // ========== DEMO LOGIN - START (CodeCanyon Review) ==========
+    // Check if credentials match demo users (no database dependency)
+    const demoUser = getDemoUser(formData.email, formData.password);
+    if (demoUser) {
+      const { user, permissions } = demoUser;
+      const demoToken = generateDemoToken(user.role);
+
+      // Set localStorage with demo user data
+      setLogin(user.role);
+      localStorage.setItem("login", user.role);
+      localStorage.setItem("role", user.role);
+      localStorage.setItem("authToken", demoToken);
+      localStorage.setItem("user_id", user.id);
+      localStorage.setItem("login_detail", JSON.stringify(user));
+      localStorage.setItem("counselor_id", user.counselor_id);
+      localStorage.setItem("student_id", user.student_id);
+      localStorage.setItem("permissions", JSON.stringify(permissions));
+      localStorage.setItem("userpermissions", JSON.stringify(permissions));
+      localStorage.setItem("authEvent", Date.now());
+      setIsLoggedIn(true);
+
+      Swal.fire({
+        title: 'Demo Login Success!',
+        text: `Welcome ${user.full_name}! You are logged in as ${user.role}.`,
+        icon: 'success',
+        confirmButtonText: 'Continue',
+      }).then(() => {
+        navigate(getDashboardPath(user.role));
+      });
+      return;
+    }
+    // ========== DEMO LOGIN - END ==========
 
     try {
       const response = await axios.post(`${BASE_URL}auth/login`, formData);
