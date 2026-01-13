@@ -1,45 +1,23 @@
-/**
- * Firebase Cloud Messaging (FCM) Configuration
- *
- * This file initializes Firebase for push notifications.
- * All Firebase credentials must be configured via environment variables.
- *
- * Required environment variables:
- * - VITE_FIREBASE_API_KEY
- * - VITE_FIREBASE_AUTH_DOMAIN
- * - VITE_FIREBASE_PROJECT_ID
- * - VITE_FIREBASE_STORAGE_BUCKET
- * - VITE_FIREBASE_MESSAGING_SENDER_ID
- * - VITE_FIREBASE_APP_ID
- * - VITE_FIREBASE_VAPID_KEY (for push notifications)
- */
-
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
-// Firebase configuration from environment variables
 const firebaseNotificationConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyB_gWuBSrztt5QMIzb7OKyBbfGHnDLDbE4",
+  authDomain: "afsana-c363c.firebaseapp.com",
+  projectId: "afsana-c363c",
+  storageBucket: "afsana-c363c.appspot.com",
+  messagingSenderId: "790999171285",
+  appId: "1:790999171285:web:7e8d2afbc23b6c404ae25c",
+  measurementId: "G-J7W8SRPJTD"
+
+  //   apiKey: "AIzaSyBcYs4b1bv9rrtPPDGdU62A8YfsgcLJYfM",
+  // authDomain: "afsana-notification.firebaseapp.com",
+  // projectId: "afsana-notification",
+  // storageBucket: "afsana-notification.firebasestorage.app",
+  // messagingSenderId: "163017084732",
+  // appId: "1:163017084732:web:91401cc504ab8060ecd839",
+  // measurementId: "G-MPCDTM28HD"
 };
-
-// Validate Firebase configuration in development
-if (import.meta.env.DEV) {
-  const missingKeys = Object.entries(firebaseNotificationConfig)
-    .filter(([key, value]) => !value)
-    .map(([key]) => key);
-
-  if (missingKeys.length > 0) {
-    console.warn(
-      `⚠️ Firebase Notification configuration incomplete. Missing: ${missingKeys.join(', ')}\n` +
-      'Push notifications will not work. See .env.example for required variables.'
-    );
-  }
-}
 
 // Prevent duplicate initialization
 const notifApp = !getApps().some(app => app.name === "notifApp")
@@ -47,8 +25,5 @@ const notifApp = !getApps().some(app => app.name === "notifApp")
   : getApp("notifApp");
 
 const messaging = getMessaging(notifApp);
-
-// Export VAPID key getter for use in components
-export const getVapidKey = () => import.meta.env.VITE_FIREBASE_VAPID_KEY || '';
 
 export { messaging, getToken, onMessage };

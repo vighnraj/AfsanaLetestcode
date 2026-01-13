@@ -102,7 +102,7 @@ import CounselorProfile from "./components/CounselorDetails/CounselorProfile";
 import CounselorStudentDetails from "./components/CounselorDetails/CounselorstudentDetails";
 import FollowUpHistory from "./components/LeadInquiryManagement/FollowUpHistory";
 import NoteHistory from "./components/LeadInquiryManagement/NoteHistory";
-import { messaging, getToken, onMessage, getVapidKey } from "./services/FirebaseNotification";
+import { messaging, getToken, onMessage } from "./services/FirebaseNotification";
 import GlobalTableScrollbar from "./components/GlobalTableScrollbar/GlobalTableScrollbar";
 import VisaProcesingNew from "./components/AdmissionTracking/VisaProcessingNew";
 import StudentVisaProcesing from "./components/Processors/StudentVisaProcess/VisaProcessingNew";
@@ -127,12 +127,9 @@ function App() {
 
         try {
           // 🔹 Replace with your actual VAPID key
-          const vapidKey = getVapidKey();
-          if (!vapidKey) {
-            console.warn('⚠️ VAPID key not configured. Push notifications disabled.');
-            return;
-          }
-          const token = await getToken(messaging, { vapidKey });
+          const token = await getToken(messaging, {
+            vapidKey: "BGtA6rCbw68KOvmAK5q8fQxAsFn7gEfvu8_6Zsu_jACSbptjeA-6NSn9IKfGy_Gk8t6-Tk0OB_P_QuEzIbwgS_k"
+          });
 
           if (token) {
             console.log("🎯 FCM Token:", token);
