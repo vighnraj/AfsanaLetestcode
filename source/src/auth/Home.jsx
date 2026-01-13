@@ -517,14 +517,7 @@ const App = () => {
       <footer className="bg-dark text-white py-4" id="contact">
         <Container>
           <Row>
-            <Col md={6}>
-              <h5>Contact Us</h5>
-              <p><strong>Hotline:</strong> +1 234 567 8900</p>
-              <p><strong>WhatsApp:</strong> +1 234 567 8901</p>
-              <p><strong>Email:</strong> info@kiaanstudyinfo.com</p>
-            </Col>
-
-            <Col md={6} className="text-md-end">
+            <Col md={12} className="text-center">
               <p>&copy; 2025 Kiaan Study Info. All Rights Reserved.</p>
               <p>Privacy Policy | Terms of Use</p>
               <p style={{ marginTop: "10px" }}>
