@@ -35,8 +35,8 @@ const App = () => {
   const universities = [
     {
       img: bmu,
-      name: "Budapest Metropolitan University",
-      location: "Nagy-téteni út 162-164, Budapest, Hungary, 1222",
+      name: "Demo University of Technology",
+      location: "123 University Street, Demo City, DC 12345",
       popularPrograms: [
         "Tourism and Catering",
         "Animation",
@@ -47,13 +47,13 @@ const App = () => {
         "Internationally recognized degrees",
         "Affordable tuition & living costs",
       ],
-      contact: "+36 1 273 3090 (International Office)",
-      email: "info@metropolitan.hu",
+      contact: "+1 234 567 8900 (International Office)",
+      email: "admissions@demo-university.edu",
     },
     {
       img: gyor,
-      name: "Széchenyi István University",
-      location: "Egyetem tér 1, 9026 Győr, Hungary",
+      name: "Global Science University",
+      location: "456 Academic Avenue, Education City, EC 67890",
       popularPrograms: [
         "Vehicle Engineering",
         "Civil Engineering",
@@ -62,15 +62,15 @@ const App = () => {
       ],
       keyHighlights: [
         "Strong reputation in IT fields",
-        "Close collaboration with Audi Hungary",
+        "Industry collaboration programs",
       ],
-      contact: "+36 96 503 418 (International Office)",
-      email: "international@sze.hu",
+      contact: "+1 234 567 8901 (International Office)",
+      email: "international@global-science.edu",
     },
     {
       img: devre,
-      name: "University of Debrecen",
-      location: "Egyetem tér 1, 4032 Debrecen, Hungary",
+      name: "International Medical University",
+      location: "789 Health Sciences Blvd, Medical City, MC 11223",
       popularPrograms: [
         "Medicine",
         "Pharmacy",
@@ -78,16 +78,16 @@ const App = () => {
         "Computer Science Engineering",
       ],
       keyHighlights: [
-        "Top Ranked University in Hungary with strong global reputation",
+        "Top Ranked University with strong global reputation",
         "Over 6,000 international students from 120+ countries",
       ],
-      contact: "+36 52 258 058 (International Office)",
-      email: "admissions@stanford.edu",
+      contact: "+1 234 567 8902 (International Office)",
+      email: "admissions@intl-medical.edu",
     },
     {
       img: hungury,
-      name: "Eötvös Loránd University",
-      location: "Egyetem tér 1-3, 1053 Budapest, Hungary",
+      name: "Premier Arts University",
+      location: "321 Creative Lane, Arts District, AD 44556",
       popularPrograms: [
         "Computer Science",
         "Psychology",
@@ -95,28 +95,28 @@ const App = () => {
         "Mathematics",
       ],
       keyHighlights: [
-        "One of the Oldest and Most Prestigious Universities in Hungary",
+        "One of the Oldest and Most Prestigious Universities",
         "Offers a wide range of English-taught programs",
       ],
-      contact: "+36 1 411 6500",
-      email: "international@elte.hu",
+      contact: "+1 234 567 8903",
+      email: "international@premier-arts.edu",
     },
     {
       img: wek,
-      name: "Wekerle Sándor Business School",
-      location: "Jázmin u. 10, 1084 Budapest, Hungary",
+      name: "Business Excellence Academy",
+      location: "654 Commerce Road, Business Park, BP 77889",
       popularPrograms: ["Commerce and Marketing", "International Relations"],
       keyHighlights: [
-        "Located in Budapest, offering great accessibility, culture, and student life",
-        "Offers affordable tuition fees compared to Western Europe",
+        "Located in a major city, offering great accessibility and culture",
+        "Offers affordable tuition fees",
       ],
-      contact: "+36 1 323 1000",
-      email: "international@wsuf.hu",
+      contact: "+1 234 567 8904",
+      email: "international@business-excellence.edu",
     },
     {
       img: hungury,
-      name: "Central European University (CEU)",
-      location: "Nádor utca 9, 1051 Budapest, Hungary",
+      name: "Central Innovation University",
+      location: "987 Innovation Drive, Tech Hub, TH 99001",
       popularPrograms: [
         "Political Science",
         "International Relations",
@@ -124,11 +124,11 @@ const App = () => {
         "Law",
       ],
       keyHighlights: [
-        "One of the leading graduate universities in Europe",
+        "One of the leading graduate universities",
         "Offers programs in English for international students",
       ],
-      contact: "+36 1 327 3000 (International Office)",
-      email: "admissions@ceu.edu",
+      contact: "+1 234 567 8905 (International Office)",
+      email: "admissions@central-innovation.edu",
     },
   ];
 
@@ -140,11 +140,11 @@ const App = () => {
       rating: "4.5",
       duration: "6 Months",
       instructor: "John Doe",
-      university: "University of Vienna, Austria",
+      university: "Demo University of Technology",
       description:
         "Learn how to manage and operate in the global tourism industry.",
       img:
-        "https://cache.careers360.mobi/media/article_images/2020/5/11/hotel-management-vs-travel-and-tourism-management.jpg", // Unsplash link
+        "https://cache.careers360.mobi/media/article_images/2020/5/11/hotel-management-vs-travel-and-tourism-management.jpg",
     },
     {
       title: "Animation Basics",
@@ -153,11 +153,11 @@ const App = () => {
       rating: "4.8",
       duration: "8 Months",
       instructor: "Jane Smith",
-      university: "Budapest University of Technology and Economics, Hungary", // Added University Name
+      university: "Global Science University",
       description:
         "An introduction to the world of animation using industry-standard tools.",
       img:
-        "https://embed-ssl.wistia.com/deliveries/57ca530bc3e8c8bb5f1f9d4f36be415a.jpg?image_crop_resized=640x358", // Unsplash link
+        "https://embed-ssl.wistia.com/deliveries/57ca530bc3e8c8bb5f1f9d4f36be415a.jpg?image_crop_resized=640x358",
     },
     {
       title: "Graphic Design Essentials",
@@ -166,11 +166,11 @@ const App = () => {
       rating: "4.7",
       duration: "5 Months",
       instructor: "Michael Lee",
-      university: "University of Debrecen, Hungary",
+      university: "International Medical University",
       description:
         "Master the fundamentals of graphic design for various media formats.",
       img:
-        "https://www.attitudetallyacademy.com/Blog/wp-content/uploads/2019/05/why-garphic-designing-course-is-more-imporatant-for-every-business.jpg", // Unsplash link
+        "https://www.attitudetallyacademy.com/Blog/wp-content/uploads/2019/05/why-garphic-designing-course-is-more-imporatant-for-every-business.jpg",
     },
     {
       title: "Photography Fundamentals",
@@ -179,11 +179,11 @@ const App = () => {
       rating: "4.6",
       duration: "3 Months",
       instructor: "Samantha Adams",
-      university: "Eötvös Loránd University, Hungary",
+      university: "Premier Arts University",
       description:
         "Learn the basics of photography, including camera settings, composition, and editing.",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcsJp8Nrcqmorag10MAdxBfPq-pmWvtVQenQ&s", // Unsplash link
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcsJp8Nrcqmorag10MAdxBfPq-pmWvtVQenQ&s",
     },
     {
       title: "Computer Science for Beginners",
@@ -192,11 +192,11 @@ const App = () => {
       rating: "4.7",
       duration: "6 Months",
       instructor: "David Brown",
-      university: "Corvinus University of Budapest, Hungary",
+      university: "Business Excellence Academy",
       description:
         "Get an introduction to programming and computer science concepts.",
       img:
-        "https://www.zdnet.com/a/img/resize/89b98c0918a56594a2d7a84d46dd5268678161b2/2021/07/19/e28889a7-7c41-4dd8-9899-2ee60d1850e2/computer-science-course-overview-shutterstock-1377112199.jpg?auto=webp&fit=crop&height=1200&width=1200", // Unsplash link
+        "https://www.zdnet.com/a/img/resize/89b98c0918a56594a2d7a84d46dd5268678161b2/2021/07/19/e28889a7-7c41-4dd8-9899-2ee60d1850e2/computer-science-course-overview-shutterstock-1377112199.jpg?auto=webp&fit=crop&height=1200&width=1200",
     },
     {
       title: "Web Development with HTML, CSS, and JavaScript",
@@ -205,11 +205,11 @@ const App = () => {
       rating: "4.9",
       duration: "6 Months",
       instructor: "Emily Davis",
-      university: "Pázmány Péter Catholic University, Hungary",
+      university: "Central Innovation University",
       description:
         "Learn how to build responsive websites using HTML, CSS, and JavaScript.",
       img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYhuaZv2zcldGUHcFtm25YNu_WH5FkznSdFw&s", // Unsplash link
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYhuaZv2zcldGUHcFtm25YNu_WH5FkznSdFw&s",
     },
   ];
   const navigate = useNavigate()
@@ -228,14 +228,14 @@ const App = () => {
           <Navbar.Brand href="#" className="d-flex align-items-center">
             <img
               src="/img/logo.png"
-              alt="CourseHub"
+              alt="Kiaan Study Info"
               height="40"
               className="me-2"
             />
             <div className="brand-text">
-              <span className="text-gradient">Course</span>
+              <span className="text-gradient">Kiaan</span>
               <span className="fw-bold" style={{ color: "white" }}>
-                Hub
+                {" "}Study Info
               </span>
             </div>
           </Navbar.Brand>
@@ -291,7 +291,7 @@ const App = () => {
           <div className="hero-content" data-aos="fade-up">
             <h1 className="hero-title mb-4">
               <span className="gradient-text">Transform</span> Your Future with
-              <span className="gradient-text"> CourseHub</span>
+              <span className="gradient-text"> Kiaan Study Info</span>
             </h1>
             <p className="hero-subtitle mb-5">
               Unlock your potential with world-class courses and expert
@@ -486,17 +486,7 @@ const App = () => {
               <Form className="newsletter-form">
                 <Row className="justify-content-center">
                   <Col md={6}>
-                    <form
-                      action="https://api.web3forms.com/submit"
-                      method="POST"
-                      className="input-group"
-                    >
-                      <input
-                        type="hidden"
-                        name="access_key"
-                        value="295df667-5bb4-4c46-a599-bef4f4e754f3"
-                      />
-
+                    <div className="input-group">
                       <input
                         type="email"
                         placeholder="Enter your email address"
@@ -505,11 +495,11 @@ const App = () => {
                         className="form-control newsletter-input"
                       />
 
-                      <button type="submit" className="btn btn-primary subscribe-btn">
+                      <button type="button" className="btn btn-primary subscribe-btn" onClick={() => alert('Newsletter subscription feature - Configure your email service')}>
                         <i className="fas fa-paper-plane me-2"></i>
                         Subscribe Now
                       </button>
-                    </form>
+                    </div>
 
                   </Col>
                 </Row>
@@ -535,12 +525,13 @@ const App = () => {
           <Row>
             <Col md={6}>
               <h5>Contact Us</h5>
-              <p><strong>Hotline:</strong> 09613752752</p>
-              <p><strong>WhatsApp:</strong> +4915217531538</p>
-              <p><strong>Email:</strong> studyfirstinfo@gmail.com</p>
+              <p><strong>Hotline:</strong> +1 234 567 8900</p>
+              <p><strong>WhatsApp:</strong> +1 234 567 8901</p>
+              <p><strong>Email:</strong> info@kiaanstudyinfo.com</p>
             </Col>
 
             <Col md={6} className="text-md-end">
+              <p>&copy; 2025 Kiaan Study Info. All Rights Reserved.</p>
               <p>Privacy Policy | Terms of Use</p>
             </Col>
           </Row>
