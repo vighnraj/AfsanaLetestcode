@@ -440,7 +440,7 @@ let processor_id = loginDetail?.id && loginDetail.id !== 135 ? loginDetail.id : 
       <div className="container-fluid d-flex justify-content-between align-items-center px-3 py-2">
         {/* Logo + Sidebar Toggle */}
         <div
-          className="d-flex align-items-center gap-3"
+          className="d-flex align-items-center gap-1"
           style={{ marginTop: "-20px" }}
         >
           <span style={{ fontSize: "20px", fontWeight: "bold", color: "#1d4ed8" }}>Kiaan</span>
