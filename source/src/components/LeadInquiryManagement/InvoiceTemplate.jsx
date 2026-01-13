@@ -55,9 +55,9 @@ const InvoiceTemplate = forwardRef(({ invoice }, invoiceRef) => {
                 <div className="row mb-4">
                     <div className="col">
                         <h5 className="fw-semibold">From:</h5>
-                        <p className="mb-1">Study First Info</p>
-                        <p className="mb-1">contact@studyfirstinfo.com</p>
-                        <p className="mb-0">India</p>
+                        <p className="mb-1">Kiaan Study Info</p>
+                        <p className="mb-1">info@kiaanstudyinfo.com</p>
+                        <p className="mb-0">Your Location</p>
                     </div>
                     <div className="col text-end">
                         <h5 className="fw-semibold">To:</h5>
