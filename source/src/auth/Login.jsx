@@ -14,13 +14,48 @@ import api from "../services/axiosInterceptor";
 import { auth, provider, signInWithPopup } from "../services/firebase"; // adjust path as needed
 import RegisterDeviceToken from "./RegisterDeviceToken";
 // Demo Authentication - For CodeCanyon reviewers
-import { getDemoUser, generateDemoToken, getDashboardPath } from "./demoAuth";
+import { getDemoUser, generateDemoToken, getDashboardPath, DEMO_USERS } from "./demoAuth";
 
 const Login = ({ setLogin }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
- const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+
+  // ========== DEMO LOGIN HANDLER - For CodeCanyon Review ==========
+  const handleDemoLogin = (email, password) => {
+    setFormData({ email, password });
+    // Auto-submit after setting credentials
+    setTimeout(() => {
+      const demoUser = getDemoUser(email, password);
+      if (demoUser) {
+        const { user, permissions } = demoUser;
+        const demoToken = generateDemoToken(user.role);
+
+        setLogin(user.role);
+        localStorage.setItem("login", user.role);
+        localStorage.setItem("role", user.role);
+        localStorage.setItem("authToken", demoToken);
+        localStorage.setItem("user_id", user.id);
+        localStorage.setItem("login_detail", JSON.stringify(user));
+        localStorage.setItem("counselor_id", user.counselor_id);
+        localStorage.setItem("student_id", user.student_id);
+        localStorage.setItem("permissions", JSON.stringify(permissions));
+        localStorage.setItem("userpermissions", JSON.stringify(permissions));
+        localStorage.setItem("authEvent", Date.now());
+        setIsLoggedIn(true);
+
+        Swal.fire({
+          title: 'Demo Login Success!',
+          text: `Welcome ${user.full_name}! You are logged in as ${user.role}.`,
+          icon: 'success',
+          confirmButtonText: 'Continue',
+        }).then(() => {
+          navigate(getDashboardPath(user.role));
+        });
+      }
+    }, 100);
+  };
 
   useEffect(() => {
   const authToken = localStorage.getItem("authToken");
@@ -382,6 +417,113 @@ const Login = ({ setLogin }) => {
             }}>Login </button>
              {isLoggedIn && <RegisterDeviceToken />}
           </form>
+
+          {/* ========== DEMO CREDENTIALS SECTION - START (CodeCanyon Review) ========== */}
+          <div style={{
+            marginTop: "20px",
+            padding: "15px",
+            backgroundColor: "#f8fafc",
+            borderRadius: "10px",
+            border: "1px dashed #cbd5e1"
+          }}>
+            <p style={{
+              fontSize: "13px",
+              color: "#64748b",
+              marginBottom: "10px",
+              textAlign: "center",
+              fontWeight: "500"
+            }}>
+              Demo Credentials (Click to Login)
+            </p>
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "8px",
+              justifyContent: "center"
+            }}>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('admin@example.com', 'Afsana@975')}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "6px",
+                  border: "none",
+                  backgroundColor: "#dc2626",
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontWeight: "500"
+                }}
+              >
+                Admin
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('rehan@example.com', '123')}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "6px",
+                  border: "none",
+                  backgroundColor: "#7c3aed",
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontWeight: "500"
+                }}
+              >
+                Counselor
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('jonny@example.com', '123456')}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "6px",
+                  border: "none",
+                  backgroundColor: "#0891b2",
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontWeight: "500"
+                }}
+              >
+                Staff
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('junny14@example.com', '123456')}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "6px",
+                  border: "none",
+                  backgroundColor: "#059669",
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontWeight: "500"
+                }}
+              >
+                Student
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('nalini@example.com', 'nalini@123')}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  borderRadius: "6px",
+                  border: "none",
+                  backgroundColor: "#d97706",
+                  color: "#fff",
+                  cursor: "pointer",
+                  fontWeight: "500"
+                }}
+              >
+                Processor
+              </button>
+            </div>
+          </div>
+          {/* ========== DEMO CREDENTIALS SECTION - END ========== */}
 
           <div style={{
             marginTop: "20px",
